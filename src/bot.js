@@ -42,8 +42,9 @@ async function bot() {
 
     while (true) {
         // Get ramaining ids
+        let ids;
         try {
-            const ids = await getIds(client);
+            ids = await getIds(client);
             console.log("Monitor...", ids);
         } catch (error) {
             console.error(error);
