@@ -22,7 +22,8 @@ const rpcUrl = process.env.RPC_URL;
 const contractAddress = process.env.CONTRACT_ADDRESS;
 const mnemonic = process.env.MNEMONIC;
 
-const gasPrice = GasPrice.fromString("140000000000aconst");
+// const gasPrice = GasPrice.fromString("140000000000aconst");
+const gasPrice = GasPrice.fromString("140000000000aarch");
 const executeFee = calculateFee(300_000, gasPrice);
 
 
