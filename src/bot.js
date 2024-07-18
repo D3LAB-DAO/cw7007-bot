@@ -49,6 +49,7 @@ async function bot() {
             console.log("Monitor...", ids);
         } catch (error) {
             console.error(error);
+            process.exit(1);
         }
 
         for (let j = 0; j < ids.ids.length; j++) {
@@ -66,11 +67,12 @@ async function bot() {
                 console.log('Token ID:', tokenId);
             } catch (error) {
                 console.error(error);
+                process.exit(1);
             }
         }
 
-        // Wait for 5 seconds before checking for new requests again
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        // Wait for 10 seconds before checking for new requests again
+        await new Promise((resolve) => setTimeout(resolve, 10000));
     }
 }
 
